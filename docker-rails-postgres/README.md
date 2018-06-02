@@ -31,3 +31,15 @@ test:
 You can now boot the app:
 
 `docker-compose up`
+
+Finally, you need to create the database. In another terminal, run:
+
+`docker-compose run web rake db:create`
+
+Go to http://localhost:3000 on a web browser to see the Rails Welcome.
+
+- To stop the application, run `docker-compose down` in your project directory.
+- To restart the application run `docker-compose up`
+- If you make changes to the Gemfile or the Compose file to try out some different configurations, you need to rebuild. Some changes require only docker-compose up --build
+
+
